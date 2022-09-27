@@ -1,0 +1,87 @@
+
+[
+    {
+        "name": "Go Bike Riding",
+        "weather": "Sunny or Cloudy",
+        "temperatureRange": "between67-79"
+    },
+    {
+        "name": "Go Fishing",
+        "weather": "Sunny or Cloudy",
+        "temperatureRange": "between67-79"
+      
+    },
+    {
+        "name": "Go Hiking",
+        "weather": "Sunny or Cloudy",
+        "temperatureRange": "between67-79"
+      
+    },
+    {
+        "name": "Go to the Movies",
+        "weather": "Rainy"      
+    },
+    {
+        "name": "Go to a Museum",
+        "weather": "Rainy"      
+    },
+    {
+        "name": "Go Shopping",
+        "weather": "Rainy"      
+    },
+    {
+        "name": "Go Ice Skating",
+        "category": "Cold",
+        "temperatureRange": "below45"
+      
+    },
+    {
+        "name": "Go Skiing",
+        "category": "Cold",
+        "temperatureRange": "below45"
+      
+    },
+    {
+        "name": "Host a Bonfire",
+        "category": "Cold",
+        "temperatureRange": "below45"
+      
+    },
+    {
+        "name": "Go to the Beach",
+        "category": "Hot",
+        "temperatureRange": "above80"
+      
+    },
+    {
+        "name": "Go to a Water Park",
+        "category": "Hot",
+        "temperatureRange": "above80"
+      
+    },
+    {
+        "name": "Go Swimming",
+        "category": "Hot",
+        "temperatureRange": "above80"
+      
+    },
+    {
+        "name": "Build a Snowman",
+        "weather": "Snowy",
+        "temperatureRange": "below45"
+      
+    },
+    {
+        "name": "Have a Snowball Fight",
+        "weather": "Snowy",
+        "temperatureRange": "below45"
+      
+    },
+    {
+        "name": "Sledding",
+        "weather": "Snowy",
+        "temperatureRange": "below45"
+      
+    }
+  ]
+  
