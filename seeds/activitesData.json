@@ -32,19 +32,19 @@
     {
         "name": "Go Ice Skating",
         "category": "Cold",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     },
     {
         "name": "Go Skiing",
         "category": "Cold",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     },
     {
         "name": "Host a Bonfire",
         "category": "Cold",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     },
     {
@@ -68,19 +68,19 @@
     {
         "name": "Build a Snowman",
         "weather": "Snowy",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     },
     {
         "name": "Have a Snowball Fight",
         "weather": "Snowy",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     },
     {
         "name": "Sledding",
         "weather": "Snowy",
-        "temperatureRange": "below45"
+        "temperatureRange": "below50"
       
     }
   ]
