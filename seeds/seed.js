@@ -8,3 +8,5 @@ const seedDatabase = async () => {
 
   const activities = await Activities.bulkCreate(activitiesData);
 }
+
+seedDatabase();
