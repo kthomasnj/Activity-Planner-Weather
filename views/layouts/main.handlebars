@@ -16,7 +16,15 @@
         Main.Handlebars
       </h1>
       <nav>
-        Nav.Main.Handlebars
+        <nav>
+        {{#if logged_in}}
+        <a href="/history">Search History</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        <a href="/signup">Sign Up</a>
+        {{/if}}
+      </nav>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
