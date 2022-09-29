@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
       res.status(200).json({"X":"Y"});
       console.log("hello");
     } catch (err) {
-      res.status(500).json(err);
+      res.status(500).json('it worked', err);
     }
   });
   
