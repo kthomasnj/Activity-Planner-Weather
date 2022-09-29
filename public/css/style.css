@@ -1,0 +1,22 @@
+h1 {
+    background-color: #b7273f;
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.nav.nav-tabs {
+	border: medium none;
+}
+
+.navbar.navbar-default .nav.navbar-nav>li>a {
+    padding: 9px 20px;
+}
+
+.navbar.navbar-default .nav.navbar-nav>li>a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    opacity: 0.8;
+    padding: 9px 29px;
+}
+
