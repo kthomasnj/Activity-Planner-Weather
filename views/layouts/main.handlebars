@@ -16,6 +16,7 @@
   <header>
     <h1> Active Weather </h1>
     <nav>
+      <a href="/">HOME</a> 
       {{#if logged_in}}
       <a href="/history">Search History</a> |
       <button class="no-button" id="logout">logout</button>
@@ -25,8 +26,6 @@
       {{/if}}
       <nav>
   </header>
-  <a href="#most_trusted" class="js-target-scroll">ABOUT US</a>
-  </nav>
   <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
     {{{ body }}}
