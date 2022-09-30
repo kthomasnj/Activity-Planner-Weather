@@ -2,28 +2,48 @@ const router = require('express').Router();
 const axios = require('axios');
 const path = require('path');
 
-// var currentCity="Chicago";
-// var url="https://api.openweathermap.org/data/2.5/weather?q="+currentCity+"&appid=bafc9bc5cbe15365eb44950399041328";
+var DATA=[];
+
+var currentCity="Chicago";
+var url1="https://api.openweathermap.org/data/2.5/weather?q="+currentCity+"&appid=166d9ab93a294c2aa16185a2466084c7";
 
 
 
-// axios.get(url)
-//     .then((res)=> {getData(res)})
-//     .catch((err)=> console.log(err))
+axios.get(url1)
+    .then((res)=> {getData(res)})
+    .catch((err)=> console.log(err))
 
 
-// function getData (data){
-//         return (data);
-// }
+
+function getData (res){
+
+       var data=res.data;
+       var lat=data.coord.lat;
+       var long=data.coord.lon;
+       getForecastData(lat,long)
+
+}
+
+function getForecastData(lat,long){
+  var url2="https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&appid=166d9ab93a294c2aa16185a2466084c7";
+  axios.get(url2)
+      .then((res)=> {printForecastData(res)})
+      .catch((err)=> console.log(err))
+}
+
+function printForecastData(res){
+    for(var i=0;i<6;i++){
+    DATA.push(res.data.daily[i].weather[0].description);
+    }
+}
 
 
 router.get('/', async (req, res) => {
     try {
       //const data = await getData();
-      res.status(200).json({"X":"Y"});
-      console.log("hello");
+      res.status(200).json({DATA});
     } catch (err) {
-      res.status(500).json('it worked', err);
+      res.status(500).json('it did not work', err);
     }
   });
   

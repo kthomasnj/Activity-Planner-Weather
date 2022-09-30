@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+require('dotenv').config();
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const path = require('path');
@@ -40,6 +41,6 @@ app.get('/test', (req, res) =>
 // );
 
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+  });
