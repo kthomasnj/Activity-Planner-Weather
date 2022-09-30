@@ -17,15 +17,15 @@ Activities.init(
       },
       weather: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       temperatureRange: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       category: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       }
     },
     {

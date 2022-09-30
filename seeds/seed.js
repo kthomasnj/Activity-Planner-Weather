@@ -5,8 +5,8 @@ const activitiesData= require('./activitesData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
   const activities = await Activities.bulkCreate(activitiesData);
+  console.log(activitiesData);
 }
 
 seedDatabase();
