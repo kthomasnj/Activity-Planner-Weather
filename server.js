@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 // turn on routes 
 
@@ -35,10 +35,10 @@ const sess = {
 };
 
 app.use(session(sess));
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-//app.use(express.static('public'));
+
 
 //GET Route for test page
 

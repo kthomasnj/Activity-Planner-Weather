@@ -33,7 +33,12 @@ function getForecastData(lat,long){
 
 function printForecastData(res){
     for(var i=0;i<6;i++){
-    DATA.push(res.data.daily[i].weather[0].description);
+    weatherDesc=res.data.daily[i].weather[0].description;
+    weatherAvgTemp=(res.data.daily[i].temp.max+res.data.daily[i].temp.min)/2;
+
+    weatherAvgTemp=Math.round(1.8*(weatherAvgTemp-273)+32);
+
+    DATA.push([weatherDesc,weatherAvgTemp]);
     }
 }
 
