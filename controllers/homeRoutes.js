@@ -23,8 +23,10 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/activities', withAuth, async (req, res) => {
-  
-    res.render('activities');
+
+    res.render('activities', {
+      logged_in: true
+    });
  
   }
 );
