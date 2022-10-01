@@ -14,13 +14,14 @@
 <body>
   <header>
     <h1>Boredom Buster</h1>
-    <nav>
-      <a href="/">HOME</a> 
+    <nav>      
       {{#if logged_in}}
-      <a href="/history">Search History</a> |
-      <button class="no-button" id="logout">logout</button>
+      <a href="/history">Search History</a> | 
+      <a href="/activities">Activities Search</a> | 
+      <a href="/" id="logout">logout</a>      
       {{else}}
-      <a href="/login">login</a>
+      <a href="/">HOME</a> | 
+      <a href="/login">login</a> | 
       <a href="/signup">Sign Up</a>
       {{/if}}
       <nav>
