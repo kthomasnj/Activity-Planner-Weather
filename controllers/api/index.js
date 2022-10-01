@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const weatherRoutes = require('./weather');
+const historyRoutes = require('./history');
 const activityRoutes=require('./activity');
 
 router.use('/users', userRoutes);
-router.use('/weather', weatherRoutes);
+router.use('/history', historyRoutes);
 router.use('/activities',activityRoutes);
 
 module.exports = router;
