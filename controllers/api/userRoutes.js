@@ -62,12 +62,16 @@ router.post('/logout', (req, res) => {
 //get current username
 
 router.get('/', async (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
-  try {
-    const userData = await User.findAll({});
 
-    res.status(200).json(userData);
+  const userData = await User.findOne({ where: { id: req.session.user_id } });
+  const userName=userData.dataValues.name;
+  console.log(userName);
+  
+  try {
+    console.log(req.session);
+    console.log(req.session.user_id);
+    
+    res.status(200).send(req.session.user_id);
   }
   catch (err) {
     res.status(500).json(err);
