@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -21,13 +22,12 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
-router.get('/activities', async (req, res) => {
-  try {
+router.get('/activities', withAuth, async (req, res) => {
+  
     res.render('activities');
-  } catch (err) {
-    res.status(500).json(err);
+ 
   }
-});
+);
 
 router.get('/history', async (req, res) => {
   try {

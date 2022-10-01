@@ -1,8 +1,5 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-
-    console.log(event);
-  
     // Collect values from the login form
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
@@ -14,6 +11,12 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
+  
+      if (response.ok) {
+        document.location.replace('/activities');
+      } else {
+        alert(response.statusText);
+      }
     }
   };
   
