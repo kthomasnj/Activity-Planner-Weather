@@ -18,11 +18,12 @@ History.init(
       date: {
         type: DataTypes.DATE
       },
-      user_name:{
-        type:DataTypes.STRING,
+      user_id:{
+        type:DataTypes.INTEGER,
+
         references: {
-            model: "USER",
-            key: "name"
+            model: 'User',
+            key: 'id'
         }
       },
     
@@ -32,7 +33,7 @@ History.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'activties'
+      modelName: 'history'
     }
 );
   
