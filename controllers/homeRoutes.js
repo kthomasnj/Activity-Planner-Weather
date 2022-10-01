@@ -18,16 +18,12 @@ router.get('/signup', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-  try {
-    res.render('login');
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  res.render('login');
 });
 
 router.get('/activities', async (req, res) => {
   try {
-    res.render('login');
+    res.render('activities');
   } catch (err) {
     res.status(500).json(err);
   }
