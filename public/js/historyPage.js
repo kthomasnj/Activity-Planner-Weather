@@ -1,7 +1,7 @@
 $.ajax({
     async: false,
-    type: 'POST',
-    url: '/api/users',
+    type: 'GET',
+    url: '/api/history',
     success: function(res) {
       console.log(res);
     }

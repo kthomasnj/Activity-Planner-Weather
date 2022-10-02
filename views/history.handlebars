@@ -1,6 +1,16 @@
 <h2>Search History Page</h2>
 
+<section class="history">
 
+    <h3>Search history for: {{name}}</h3>
+
+    {{#each array}}
+    
+    <h3>Date is {{this.dataValues.date}}</h3>
+    <h3>Activity picked: {{this.dataValues.selectedActivity}}</h3>
+    {{/each}}
+
+</section>
 
 <script src="./js/historyPage.js"></script>
 <script src="./js/logout.js"></script>

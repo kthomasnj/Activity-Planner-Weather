@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
   try {
     const activityData = await Activities.findAll({});
 
+
     // const activities=[];
 
     // for(var i=0;i<activityData.length;i++){

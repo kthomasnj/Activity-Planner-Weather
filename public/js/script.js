@@ -84,24 +84,27 @@ $(document).on('click', '.search', function() {
 
     //Add history data to SQL using put
 
-    for(var i=0;i<historyData.length;i++){
+    
 
             historyObjectToSend={
-              "activity":historyData[i],
+              "activity":historyData,
               "date":datePicked
             }
 
-            $.ajax({
-              async: false,
-              type: 'POST',
-              url: '/api/history',
-              data: historyObjectToSend,
-              success: function(res) {console.log("Successfully Posted")
-            }
+            console.log(historyObjectToSend);
 
-     });
-  }
-})
+            fetch('/api/history', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(historyObjectToSend),
+            });
+    
+
+  })
+
+  
 
   for (var i=1;i<6;i++){
     DATEARRAY.push(moment().add(i, 'days').format("YYYY-MM-DD"));
