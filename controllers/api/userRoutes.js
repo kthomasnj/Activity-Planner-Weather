@@ -65,13 +65,11 @@ router.get('/', async (req, res) => {
 
   const userData = await User.findOne({ where: { id: req.session.user_id } });
   const userName=userData.dataValues.name;
+
   console.log(userName);
   
   try {
-    console.log(req.session);
-    console.log(req.session.user_id);
-    
-    res.status(200).send(req.session.user_id);
+    res.status(200).send(userName);
   }
   catch (err) {
     res.status(500).json(err);

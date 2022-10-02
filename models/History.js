@@ -16,7 +16,7 @@ History.init(
         allowNull: false
       },
       date: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING
       },
       user_id:{
         type:DataTypes.INTEGER,

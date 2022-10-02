@@ -1,8 +1,12 @@
+
+
 var DATEARRAY=[];
 var W_DESC;
 var TEMP;
 
-$(document).on('click', '.search', function(){ 
+var historyData=[];
+
+$(document).on('click', '.search', function() { 
     
     $(".results").empty();
     var datePicked=$("#pickedDate").val();
@@ -10,7 +14,7 @@ $(document).on('click', '.search', function(){
     var idx;
 
     for(var i=0;i<5;i++){
-       if(datePicked== DATEARRAY[i])
+       if(datePicked == DATEARRAY[i])
             idx=i;     
       }
     console.log(idx);
@@ -56,8 +60,10 @@ $(document).on('click', '.search', function(){
 
           
           for(var i=0;i<res.length;i++){
-            if(res[i].weather.includes("Sunny"))
+            if(res[i].weather.includes("Sunny")) {
                 $(".results").append("<h6>Activities Available:"+res[i].name+" </h6>");
+                historyData.push(res[i].name);
+              }
             }
           
          }
@@ -65,20 +71,39 @@ $(document).on('click', '.search', function(){
          else if(W_DESC.includes("rain") || W_DESC.includes("drizzle")){
 
             for(var i=0;i<res.length;i++){
-                if(res[i].weather.includes("Rainy"))
+                if(res[i].weather.includes("Rainy")){
                     $(".results").append("<h6>Activities Available:"+res[i].name+" </h6>");
+                    historyData.push(res[i].name);
+                  }
                 }
-         }
+          }
         }
     });
 
+    console.log(historyData);
 
+    //Add history data to SQL using put
 
-    
+    for(var i=0;i<historyData.length;i++){
 
-  });
+            historyObjectToSend={
+              "activity":historyData[i],
+              "date":datePicked
+            }
 
-  for(var i=1;i<6;i++){
+            $.ajax({
+              async: false,
+              type: 'POST',
+              url: '/api/history',
+              data: historyObjectToSend,
+              success: function(res) {console.log("Successfully Posted")
+            }
+
+     });
+  }
+})
+
+  for (var i=1;i<6;i++){
     DATEARRAY.push(moment().add(i, 'days').format("YYYY-MM-DD"));
   }
 
