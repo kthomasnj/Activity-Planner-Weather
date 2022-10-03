@@ -1,8 +1,9 @@
 h1 {
-    background-color: lightgreen;
+    background-color: rgb(106, 242, 106);
     text-align: center;
-    font-size: 4.5rem;
-}
+    font-size: 6.5rem;
+    font-family: Wild World;
+    color: rgba(220, 20, 60, 0.846);
 
 table {
     width: 100%;  
