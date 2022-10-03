@@ -4,22 +4,28 @@ h1 {
     font-size: 4.5rem;
 }
 
-table {
-    width: 100%;  
-    border: 1px;
-    min-width: 100%;
-    position: relative;
-    opacity: 0.97;
-    background-color: lightskyblue;
-    padding:20px;
-  }
-
-  nav div {
+nav div {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-right: 30px;
     float: right;
      font-size: 20px;
+}
+
+#history-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#history-table th {
+  border: 1px solid;
+  padding: 5px;
+}
+
+#history-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
 }
 
 

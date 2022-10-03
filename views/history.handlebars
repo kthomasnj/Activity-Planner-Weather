@@ -5,9 +5,12 @@
     <h3>Search History for: {{name}}</h3>
 
     {{#each array}}
-    
-    <h3>Date is {{this.dataValues.date}}</h3>
-    <h3>Activity picked: {{this.dataValues.selectedActivity}}</h3>
+    <table id="history-table">
+        <tr>
+            <th>{{this.dataValues.date}}</th>
+            <th>{{this.dataValues.selectedActivity}}</th>
+        </tr>
+    </table>
     {{/each}}
 
 </section>
