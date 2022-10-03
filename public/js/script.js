@@ -114,7 +114,7 @@ $(document).on('click', '.search', function() {
   lastDate=moment().add(5, 'days').format("YYYY-MM-DD");
 
   var htmlToAdd=
-  "<h3>Select Date for Activity: </h3>"+
+  "<h3>Select Date for Activity: </h3>"+ "<h6> *Note: You must pick a date within a five day window. </h6>"+
   "<input type='date' id='pickedDate' min="+firstDate+" max="+lastDate+" value="+firstDate+">"+
   "<button class='search'>Search</button>"+
   "<article class='results'></article>";
