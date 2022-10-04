@@ -12,20 +12,26 @@ nav div {
      font-size: 20px;
 }
 
-#history-table {
+.history-table {
   table-layout: fixed;
   width: 100%;
-}
-
-#history-table th {
   border: 1px solid;
-  padding: 5px;
 }
 
-#history-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+#history-header{
+  border-bottom: 1px solid;
+  font-size: 20px;
+}
+
+.history-table th {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: dashed;
+  border-bottom-width: thin;
   text-align: left;
 }
 
+#history-input {
+  font-size: 15px;
+}
 
