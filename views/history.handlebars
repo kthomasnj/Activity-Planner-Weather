@@ -1,18 +1,19 @@
-<h2>Search History Page</h2>
-
 <section class="history">
 
-    <h3>Search History for: {{name}}</h3>
+    <h3>{{name}}'s Activity History</h3>
 
+    <table class="history-table">
+        <tr id="history-header">
+            <th>Date</th>
+            <th>Activity</th>
+        </tr>
     {{#each array}}
-    <table id="history-table">
-        <tr>
+        <tr id="history-input">
             <th>{{this.dataValues.date}}</th>
             <th>{{this.dataValues.selectedActivity}}</th>
         </tr>
-    </table>
     {{/each}}
-
+    </table>
 </section>
 
 <script src="./js/historyPage.js"></script>
