@@ -16,14 +16,14 @@
 <body>
   <header>
     <h1 class="text-white">Boredom Buster</h1>
-    <nav>      
-      {{#if logged_in}}
-      <a <button type="button" class="btn btn-dark" href="/history">Search History</button></a>  | 
-      <a <button type="button" class="btn btn-dark" href="/activities">Activities Search</button></a> | 
+    <nav id="nav-buttons">      
+      {{#if logged_in}}  
+      <a <button type="button" class="btn btn-dark btn-space" href="/activities">Activities Search</button></a>  
+      <a <button type="button" class="btn btn-dark btn-space" href="/history">Search History</button></a>
       <a <button type="button" class="btn btn-dark" href="/" id="logout">Log out</button></a>      
       {{else}}
-      <a <button type="button" class="btn btn-dark" href="/">Home</button></a> | 
-      <a <button type="button" class="btn btn-dark" href="/login">Log in</button></a> | 
+      <a <button type="button" class="btn btn-dark btn-space" href="/">Home</button></a>  
+      <a <button type="button" class="btn btn-dark btn-space" href="/login">Log in</button></a> 
       <a <button type="button" class="btn btn-dark" href="/signup">Sign Up</button></a>
       {{/if}}
       <nav>

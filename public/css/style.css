@@ -6,18 +6,34 @@ h1 {
   font-family: monaco;
 }
 
-nav div {
+h3 {
+  font-family: monaco;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 25px;
+}
+
+/* nav div {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-right: 30px;
   float: right;
    font-size: 20px;
+} */
+
+#nav-buttons {
+  padding-left: 10px;
+  font-family: monaco;
+}
+
+.btn-space{
+  margin-right:10px;
 }
 
 .history-table {
 table-layout: fixed;
 width: 100%;
-border: 1px solid;
+font-family: monaco;
 }
 
 #history-header{
@@ -34,7 +50,7 @@ text-align: left;
 }
 
 #history-input {
-font-size: 15px;
+font-size: 13px;
 }
 body {
 background-image: url("https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
