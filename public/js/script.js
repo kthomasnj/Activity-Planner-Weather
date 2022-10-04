@@ -115,22 +115,12 @@ $(document).on('click', '.search', function() {
 
   var htmlToAdd=
   "<section class='card' style='width: 30rem'>"+
-  "<h3 class=' text-center p-3 mb-2 bg-dark text-white Bored'>Select Date for Activity: </h3>"+ "<h6> *Note: You must pick a date within a five day window. </h6>"+
+  "<h3 class=' text-center p-3 mb-2 text-white Bored'>Select Date for Activity: </h3>"+ "<h6> *Note: You must pick a date within a five day window. </h6>"+
   "<input type='date' id='pickedDate' min="+firstDate+" max="+lastDate+" value="+firstDate+">"+
-  "<button class='search btn btn-success'>Search</button>"+
+  "<button class='search btn btn-light'>Search</button>"+
   "<article class='results'></article>" +
   "</section>";
 
   $("#list-activities").append(htmlToAdd);
 
-  // <section class="card">
-  //     <h2 class="text-center p-3 mb-2 bg-dark text-white Bored">How to use this app:</h2>
-  // <section class="card-body">
-  //   <blockquote class="blockquote mb-0 text-center">
-  //     <p>Sign up or log in. </p>
-  //     <p>Search up the date within a five-day window on which you would like to make plans. </p>
-  //     <p>Depending on the weather, certain activities will pop-up on the screen. </p>
-  //     <p>Your searches are saved. View your search history at anytime.</p>
-  //   </blockquote>
-  // </section>
-  // </section>
+  

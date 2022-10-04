@@ -52,3 +52,7 @@ background-color: #cccccc;
 .Bored{
   font-family: monaco;
 }
+
+#list-activities h3{
+  background-color: rgb(44, 59, 19);
+}
