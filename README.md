@@ -19,4 +19,5 @@ A user can access search history by clicking the SEARCH HISTORY button. Users ca
 
 # Links
 Deployed URL - https://boredom-buster.herokuapp.com/
+
 GitHub Repo - https://github.com/kthomasnj/Activity-Planner-Weather
