@@ -1,6 +1,6 @@
 # Activity-Planner-Weather
 
-# Desrctiption
+# Description
 Ever feel bored, like you want to do something, but you don't know what you want to do? Our application can solve that problem. 
 Search for a date and the application will recommend a few activities based on the weather for you to do.
 
