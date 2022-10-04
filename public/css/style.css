@@ -6,12 +6,20 @@ h1 {
   font-family: monaco;
 }
 
-nav div {
+/* nav div {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-right: 30px;
   float: right;
    font-size: 20px;
+} */
+
+#nav-buttons {
+  padding-left: 10px;
+}
+
+.btn-space{
+  margin-right:10px;
 }
 
 .history-table {
