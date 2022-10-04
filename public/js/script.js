@@ -8,7 +8,7 @@ var historyData=[];
 
 $(document).on('click', '.search', function() { 
     
-    $(".results").empty();
+    $(".results").remove();
     var datePicked=$("#pickedDate").val();
 
     var idx;
@@ -22,11 +22,6 @@ $(document).on('click', '.search', function() {
     datePicked=moment(datePicked).format('dddd,  MMMM Do');
    
 
-    // var htmlToAdd2=
-    // "<h3>Picked Date: </h3>"+
-    // "<input type='date' id='pickedDate' min="+firstDate+" max="+lastDate+" value="+firstDate+">"+
-    // "<button class='search'>Search</button>"+
-    // "<article class='results'></article>";
     $.ajax({
         async: false,
         type: 'GET',
@@ -39,7 +34,7 @@ $(document).on('click', '.search', function() {
           TEMP=weatherData[idx+1][1];
 
           var dateWeatherAppend=
-          '<div class="card" style="width: 20rem;">'+
+          '<div class="results card" style="width: 20rem;">'+
           '<div class="card-header">Date Picked: '+datePicked+'</div>'+
           '<div class="card-header" style="text-transform: capitalize">Forecasted Weather: '+W_DESC+'  '+TEMP+'&#8457;</div>'+
           '<ul class="list-group list-group-flush">'+
@@ -48,10 +43,7 @@ $(document).on('click', '.search', function() {
         '</div>';
 
         $("#list-activities").append(dateWeatherAppend);
-          
-          // $(".results").append("<h6>Date Picked: "+datePicked+"</h6></article>");
-          // $(".results").append("<h6>Forecasted Weather: "+W_DESC+"</h6>");
-          // $(".results").append("<h6>Forecasted Temperature: "+TEMP+"</h6>");
+     
 
         }
       });
@@ -74,7 +66,7 @@ $(document).on('click', '.search', function() {
           
           for(var i=0;i<res.length;i++){
             if(res[i].weather.includes("Sunny")) {
-                $(".list-group").append('<li class="list-group-item" style="text-transform: capitalize">'+res[i].name+'</li>');;
+                $(".list-group").append('<li class="list-group-item" style="text-transform: capitalize">'+res[i].name+'</li>');
                 historyData.push(res[i].name);
               }
             }
