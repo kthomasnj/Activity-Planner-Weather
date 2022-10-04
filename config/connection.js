@@ -1,41 +1,28 @@
-// // Hasna's Connection string
-
-// // require('dotenv').config();
-
-// // const Sequelize = require('sequelize');
-
-// // const sequelize = process.env.JAWSDB_URL
-// //   ? new Sequelize(process.env.JAWSDB_URL)
-// //   : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-// //       host: 'localhost',
-// //       dialect: 'mysql',
-// //       dialectOptions: {
-// //         decimalNumbers: true,
-// //       },
-// //     });
-
-// // module.exports = sequelize;
-
-
-
-// // Keith's connections string
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
+
+
 let sequelize;
 
-if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL);
+if (process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {dialectOptions: {
+    ssl: {
+        rejectUnauthorized: false
+    }
+}});
 } else {
+  console.log('Using local DB');
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    process.env.DB_PASSWORD,    
     {
       host: 'localhost',
       dialect: 'mysql',
       port: 3306
-    }
+    },
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0',
   );
 }
 
