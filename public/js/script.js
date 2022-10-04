@@ -38,13 +38,26 @@ $(document).on('click', '.search', function() {
           W_DESC=weatherData[idx+1][0];
           TEMP=weatherData[idx+1][1];
 
+          var dateWeatherAppend=
+          '<div class="card" style="width: 20rem;">'+
+          '<div class="card-header">Date Picked: '+datePicked+'</div>'+
+          '<div class="card-header" style="text-transform: capitalize">Forecasted Weather: '+W_DESC+'  '+TEMP+'&#8457;</div>'+
+          '<ul class="list-group list-group-flush">'+
+           
+          '</ul>'+
+        '</div>';
+
+        $("#list-activities").append(dateWeatherAppend);
           
-          $(".results").append("<h6>Date Picked: "+datePicked+"</h6>");
-          $(".results").append("<h6>Forecasted Weather: "+W_DESC+"</h6>");
-          $(".results").append("<h6>Forecasted Temperature: "+TEMP+"</h6>");
+          // $(".results").append("<h6>Date Picked: "+datePicked+"</h6></article>");
+          // $(".results").append("<h6>Forecasted Weather: "+W_DESC+"</h6>");
+          // $(".results").append("<h6>Forecasted Temperature: "+TEMP+"</h6>");
 
         }
       });
+
+
+
 
       $.ajax({
         async: false,
@@ -61,7 +74,7 @@ $(document).on('click', '.search', function() {
           
           for(var i=0;i<res.length;i++){
             if(res[i].weather.includes("Sunny")) {
-                $(".results").append("<h6>Activities Available:"+res[i].name+" </h6>");
+                $(".list-group").append('<li class="list-group-item" style="text-transform: capitalize">'+res[i].name+'</li>');;
                 historyData.push(res[i].name);
               }
             }
@@ -72,7 +85,7 @@ $(document).on('click', '.search', function() {
 
             for(var i=0;i<res.length;i++){
                 if(res[i].weather.includes("Rainy")){
-                    $(".results").append("<h6>Activities Available: " +res[i].name+" </h6>");
+                    $(".list-group").append('<li class="list-group-item" style="text-transform: capitalize">'+res[i].name+'</li>');
                     historyData.push(res[i].name);
                   }
                 }
@@ -118,8 +131,8 @@ $(document).on('click', '.search', function() {
   "<h3 class=' text-center p-3 mb-2 text-white Bored'>Select Date for Activity: </h3>"+ "<h6> *Note: You must pick a date within a five day window. </h6>"+
   "<input type='date' id='pickedDate' min="+firstDate+" max="+lastDate+" value="+firstDate+">"+
   "<button class='search btn btn-light'>Search</button>"+
-  "<article class='results'></article>" +
-  "</section>";
+  "</section>" 
+  ;
 
   $("#list-activities").append(htmlToAdd);
 
