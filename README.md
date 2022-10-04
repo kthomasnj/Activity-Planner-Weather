@@ -1,4 +1,4 @@
-# Activity-Planner-Weather
+# Boredom Buster
 
 # Description
 Ever feel bored, like you want to do something, but you don't know what you want to do? Our application can solve that problem. 
@@ -15,6 +15,20 @@ Once logged on, the user is taken to the ACTIVITIES SEARCH page. The user can ch
 A user can access search history by clicking the SEARCH HISTORY button. Users can also log out at any time.
 
 # Screenshots
+
+# Technologies Used
+* CSS/Bootstrap
+* Javascript
+* Node.js 
+* Express.js 
+* Handlebars.js 
+* MySQL 
+* Sequelize ORM 
+* GET/POST routes
+* Heroku
+* Postgres DB
+* Axios
+* Ajax
 
 # Future Development
 
