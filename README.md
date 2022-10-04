@@ -26,6 +26,7 @@ A user can access search history by clicking the SEARCH HISTORY button. Users ca
 * Add about page with team members portfolio links.
 * Add a link to the header to return to the home page.
 * Add forecast, the company holding the event and the event links to each item in the search history.
+* Expand to beyond Chicago
 
 
 # Links
