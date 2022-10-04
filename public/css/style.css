@@ -24,9 +24,12 @@ h3 {
    font-size: 20px;
 } */
 
+.btn {
+  font-family: monaco;
+}
+
 #nav-buttons {
   padding-left: 10px;
-  font-family: monaco;
 }
 
 .btn-space{
