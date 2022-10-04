@@ -78,3 +78,13 @@ background-color: #cccccc;
 #list-activities h3{
   background-color: rgb(44, 59, 19);
 }
+
+.form-group {
+  font-family: monaco;
+  font-family: 15px;
+}
+
+.form-input {
+  font-family: monaco;
+  font-size: 15px;
+}
