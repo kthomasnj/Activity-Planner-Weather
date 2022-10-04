@@ -72,7 +72,7 @@ $(document).on('click', '.search', function() {
 
             for(var i=0;i<res.length;i++){
                 if(res[i].weather.includes("Rainy")){
-                    $(".results").append("<h6>Activities Available:"+res[i].name+" </h6>");
+                    $(".results").append("<h6>Activities Available: "+res[i].name+" </h6>");
                     historyData.push(res[i].name);
                   }
                 }
@@ -114,7 +114,7 @@ $(document).on('click', '.search', function() {
   lastDate=moment().add(5, 'days').format("YYYY-MM-DD");
 
   var htmlToAdd=
-  "<section class='card' style='width: 30rem'>"+
+  "<section class='card' style='width: 40rem'>"+
   "<h3 class=' text-center p-3 mb-2 text-white Bored'>Select Date for Activity: </h3>"+ "<h6> *Note: You must pick a date within a five day window. </h6>"+
   "<input type='date' id='pickedDate' min="+firstDate+" max="+lastDate+" value="+firstDate+">"+
   "<button class='search btn btn-light'>Search</button>"+
