@@ -72,7 +72,7 @@ $(document).on('click', '.search', function() {
 
             for(var i=0;i<res.length;i++){
                 if(res[i].weather.includes("Rainy")){
-                    $(".results").append("<h6>Activities Available: "+res[i].name+" </h6>");
+                    $(".results").append("<h6>Activities Available: " +res[i].name+" </h6>");
                     historyData.push(res[i].name);
                   }
                 }
