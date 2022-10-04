@@ -1,5 +1,9 @@
 h1 {
+<<<<<<< HEAD
     background-color: rgb(106, 242, 106);
+=======
+    background-color: darkolivegreen;
+>>>>>>> 02db04c591c655f3d6beafa594d52638cdfb0392
     text-align: center;
     font-size: 6.5rem;
     font-family: Wild World;
@@ -35,4 +39,9 @@ nav div {
 #history-input {
   font-size: 15px;
 }
-
+body {
+  background-image: url("https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
