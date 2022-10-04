@@ -1,5 +1,5 @@
 h1 {
-    background-color: lightgreen;
+    background-color: darkolivegreen;
     text-align: center;
     font-size: 4.5rem;
 }
@@ -34,4 +34,9 @@ nav div {
 #history-input {
   font-size: 15px;
 }
-
+body {
+  background-image: url("https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
