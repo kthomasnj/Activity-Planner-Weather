@@ -58,6 +58,7 @@ text-align: left;
 #history-input {
 font-size: 13px;
 }
+
 body {
 background-image: url("https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
 background-repeat: no-repeat;
@@ -73,6 +74,7 @@ background-color: #cccccc;
 
 .Bored{
   font-family: monaco;
+  background-color: rgb(44, 59, 19);
 }
 
 #list-activities h3{
