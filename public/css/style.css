@@ -41,6 +41,8 @@ background-size: cover;
 background-color: #cccccc;
 }
 
-.test {
-background-color:#cccccc
+.card {
+  margin: 0 auto;
+  float: none; 
+  margin-bottom: 10px;
 }
