@@ -16,6 +16,17 @@ A user can access search history by clicking the SEARCH HISTORY button. Users ca
 
 # Screenshots
 
+# Future Development
+
+* Clear Search history.
+* Link to event on Activities page and History page.
+* Change login and signup pages to modals.
+* Restrict Select Date for Activity to only the available dates.
+* Add featured activities to the home and Activities Search pages.
+* Add about page with team members portfolio links.
+* Add a link to the header to return to the home page.
+* Add forecast, the company holding the event and the event links to each item in the search history.
+
 
 # Links
 Deployed URL - https://boredom-buster.herokuapp.com/
