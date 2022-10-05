@@ -15,6 +15,11 @@ Once logged on, the user is taken to the ACTIVITIES SEARCH page. The user can ch
 A user can access search history by clicking the SEARCH HISTORY button. Users can also log out at any time.
 
 # Screenshots
+![](./public/images/Homepage.png)
+![](./public/images/SignUp.png)
+![](./public/images/Login.png)
+![](./public/images/ActivitySearch.png)
+![](./public/images/History.png)
 
 # Technologies Used
 * CSS/Bootstrap
