@@ -14,13 +14,6 @@ router.get('/', async (req, res) => {
     const activityData = await Activities.findAll({});
 
 
-    // const activities=[];
-
-    // for(var i=0;i<activityData.length;i++){
-    //   activities.push(activityData[i].dataValues.name)
-    // }
-    // const convertedData=JSON.stringify(activityData);
-    // res.render('activities',{openWeatherData: DATA[0], activityList: activities});
 
     res.status(200).json(activityData);
 
