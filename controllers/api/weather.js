@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const axios = require('axios');
 const path = require('path');
+require('dotenv').config();
 
 var DATA=[];
 
 var currentCity="Chicago";
-var url1="https://api.openweathermap.org/data/2.5/weather?q="+currentCity+"&appid=166d9ab93a294c2aa16185a2466084c7";
+var url1="https://api.openweathermap.org/data/2.5/weather?q="+currentCity+"&appid="+process.env.APIKEY;
 
 
 
@@ -25,7 +26,7 @@ function getData (res){
 }
 
 function getForecastData(lat,long){
-  var url2="https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&appid=166d9ab93a294c2aa16185a2466084c7";
+  var url2="https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&appid="+process.env.APIKEY;
   axios.get(url2)
       .then((res)=> {printForecastData(res)})
       .catch((err)=> console.log(err))
